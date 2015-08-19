@@ -14,7 +14,7 @@
 
 -(NSUInteger) countSmiles;
 
--(YT_Smile *) getSmileAtIndex:(NSUInteger)index;
+-(YT_Smile *) getSmileAtIndex:(NSInteger)index;
 
 -(void) addSmileWithName:(NSString *)name description:(NSString *)desc imageIndex:(int) imageIndex;
 

@@ -18,6 +18,7 @@
         _desc = desc;
         _imageIndex = imageIndex;
         
+        NSLog(@"init smile");
         return self;
     }
     return nil;

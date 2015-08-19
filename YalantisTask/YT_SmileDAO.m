@@ -23,7 +23,9 @@
 {
     self = [super init];
     if (self) {
+        _smiles = [[NSMutableArray alloc] init];
         [self initDefaultSmiles];
+        NSLog(@"init smileDAO");
         return self;
     }
     return nil;
@@ -32,15 +34,15 @@
 -(void)initDefaultSmiles
 {
     [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:1];
-    [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:2];
-    [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:3];
-    [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:4];
-    [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:5];
-    [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:6];
-    [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:7];
-    [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:8];
-    [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:9];
-    [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:10];
+    [self addSmileWithName:@"Surprise" description:@"Surprised smile" imageIndex:2];
+    [self addSmileWithName:@"Shiny" description:@"Very happy smile" imageIndex:3];
+    [self addSmileWithName:@"Winky" description:@"Winking smile" imageIndex:4];
+    [self addSmileWithName:@"Cool" description:@"Cool smile" imageIndex:5];
+    [self addSmileWithName:@"Teasy" description:@"Teasing smile" imageIndex:6];
+    [self addSmileWithName:@"Puzzle" description:@"Puzzled smile" imageIndex:7];
+    [self addSmileWithName:@"Sad" description:@"Sad smile" imageIndex:8];
+    [self addSmileWithName:@"Weepy" description:@"Crying smile" imageIndex:9];
+    [self addSmileWithName:@"Angry" description:@"Angry smile" imageIndex:10];
 }
 
 -(void)addSmileWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex
@@ -49,13 +51,15 @@
     [self.smiles addObject:smile];
 }
 
--(YT_Smile *)getSmileAtIndex:(NSUInteger)index
+-(YT_Smile *)getSmileAtIndex:(NSInteger)index
 {
+    NSLog(@"getSmileAtIndex");
     return [self.smiles objectAtIndex:index];
 }
 
 -(NSUInteger)countSmiles
 {
+    NSLog(@"countSmiles = %d", (int)[self.smiles count]);
     return [self.smiles count];
 }
 
