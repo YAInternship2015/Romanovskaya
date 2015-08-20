@@ -18,6 +18,7 @@
 
 @implementation YT_MainTableViewController
 
+#warning так как в этом методе вы ничего не кастомизируете, его можно удалить
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
@@ -35,6 +36,7 @@
 {
     [super awakeFromNib];
     NSLog(@"awake from nib");
+#warning настройки работы контроллера привычнее видет во viewDidLoad. Если, допустим, у контроллера не будет Interface Builder представления, то этот метод не вызовется
     self.smileDAO = [[YT_SmileDAO alloc] init];
 }
 
@@ -53,6 +55,7 @@
 {
     NSLog(@"tableView2");
 
+#warning в требованиях я писал, что Вы должны реализовать кастомную ячейку, у которой будет метод вроде setupWithSmile:, в котором она будет заполнять себя моделью. Эту ячейку надо спроектировать с autolayout
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:
                              @"smileCell" forIndexPath:indexPath];
     YT_Smile * smile = [self.smileDAO getSmileAtIndex:indexPath.row];
