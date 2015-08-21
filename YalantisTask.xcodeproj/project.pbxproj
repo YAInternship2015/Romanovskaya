@@ -13,7 +13,6 @@
 		C9A92DE91B83C8A7009E274D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9A92DE81B83C8A7009E274D /* Images.xcassets */; };
 		C9A92DEC1B83C8A7009E274D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A92DEA1B83C8A7009E274D /* LaunchScreen.xib */; };
 		C9A92DF81B83C8A8009E274D /* YalantisTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A92DF71B83C8A8009E274D /* YalantisTaskTests.m */; };
-		C9A92E021B83C9F3009E274D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C9A92E011B83C9F3009E274D /* .gitignore */; };
 		C9A92E061B83CA6C009E274D /* YT_Smile.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A92E051B83CA6C009E274D /* YT_Smile.m */; };
 		C9A92E091B83CE66009E274D /* YT_SmileDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A92E081B83CE66009E274D /* YT_SmileDAO.m */; };
 		C9A92E0C1B83D764009E274D /* YT_MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A92E0B1B83D764009E274D /* YT_MainTableViewController.m */; };
@@ -41,7 +40,6 @@
 		C9A92DF11B83C8A8009E274D /* YalantisTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YalantisTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A92DF61B83C8A8009E274D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9A92DF71B83C8A8009E274D /* YalantisTaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YalantisTaskTests.m; sourceTree = "<group>"; };
-		C9A92E011B83C9F3009E274D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = YalantisTask/.gitignore; sourceTree = "<group>"; };
 		C9A92E041B83CA6C009E274D /* YT_Smile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_Smile.h; sourceTree = "<group>"; };
 		C9A92E051B83CA6C009E274D /* YT_Smile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_Smile.m; sourceTree = "<group>"; };
 		C9A92E071B83CE66009E274D /* YT_SmileDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_SmileDAO.h; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 		C9A92DCF1B83C8A7009E274D = {
 			isa = PBXGroup;
 			children = (
-				C9A92E011B83C9F3009E274D /* .gitignore */,
 				C9A92DDA1B83C8A7009E274D /* YalantisTask */,
 				C9A92DF41B83C8A8009E274D /* YalantisTaskTests */,
 				C9A92DD91B83C8A7009E274D /* Products */,
@@ -221,7 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9A92E021B83C9F3009E274D /* .gitignore in Resources */,
 				C9A92DE71B83C8A7009E274D /* Main.storyboard in Resources */,
 				C9A92DEC1B83C8A7009E274D /* LaunchScreen.xib in Resources */,
 				C9A92DE91B83C8A7009E274D /* Images.xcassets in Resources */,
