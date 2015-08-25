@@ -13,7 +13,8 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *desc;
 @property (nonatomic, assign) int imageIndex;
+@property (nonatomic, copy) NSString *glyph;
 
--(id) initWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex;
+-(id) initWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex glyph:(NSString *)glyph;
 
 @end

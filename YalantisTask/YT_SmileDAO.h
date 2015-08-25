@@ -16,6 +16,6 @@
 
 -(YT_Smile *) getSmileAtIndex:(NSInteger)index;
 
--(void) addSmileWithName:(NSString *)name description:(NSString *)desc imageIndex:(int) imageIndex;
+-(void) addSmileWithName:(NSString *)name description:(NSString *)desc imageIndex:(int) imageIndex glyph:(NSString *)glyph;
 
 @end

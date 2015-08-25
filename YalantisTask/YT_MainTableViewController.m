@@ -9,6 +9,7 @@
 #import "YT_MainTableViewController.h"
 #import "YT_SmileDAO.h"
 #import "YT_Smile.h"
+#import "YT_SmileTableViewCell.h"
 
 @interface YT_MainTableViewController ()
 
@@ -45,21 +46,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section
 {
-    NSLog(@"tableView");
     return [self.smileDAO countSmiles];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"tableView2");
-
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    YT_SmileTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:
                              @"smileCell" forIndexPath:indexPath];
     YT_Smile * smile = [self.smileDAO getSmileAtIndex:indexPath.row];
-    cell.textLabel.text = smile.name;
-    cell.detailTextLabel.text = smile.desc;
+    cell.title.text = smile.name;
+    cell.subtitle.text = smile.desc;
+    cell.glyph.text = smile.glyph;
     NSString *i = [NSString stringWithFormat:@"%d", smile.imageIndex];
-    cell.imageView.image = [UIImage imageNamed:i];
+    UIImage *image = [UIImage imageNamed:i];
+    cell.smileView.image = image;
     return cell;
 }
 

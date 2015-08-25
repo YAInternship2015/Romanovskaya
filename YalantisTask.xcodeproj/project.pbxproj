@@ -16,6 +16,7 @@
 		C9A92E061B83CA6C009E274D /* YT_Smile.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A92E051B83CA6C009E274D /* YT_Smile.m */; };
 		C9A92E091B83CE66009E274D /* YT_SmileDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A92E081B83CE66009E274D /* YT_SmileDAO.m */; };
 		C9A92E0C1B83D764009E274D /* YT_MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A92E0B1B83D764009E274D /* YT_MainTableViewController.m */; };
+		C9B03D9C1B8CFD6000CDCB00 /* YT_SmileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B03D9B1B8CFD6000CDCB00 /* YT_SmileTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		C9A92E081B83CE66009E274D /* YT_SmileDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_SmileDAO.m; sourceTree = "<group>"; };
 		C9A92E0A1B83D764009E274D /* YT_MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_MainTableViewController.h; sourceTree = "<group>"; };
 		C9A92E0B1B83D764009E274D /* YT_MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_MainTableViewController.m; sourceTree = "<group>"; };
+		C9B03D9A1B8CFD6000CDCB00 /* YT_SmileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_SmileTableViewCell.h; sourceTree = "<group>"; };
+		C9B03D9B1B8CFD6000CDCB00 /* YT_SmileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_SmileTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				C9A92E0A1B83D764009E274D /* YT_MainTableViewController.h */,
 				C9A92E0B1B83D764009E274D /* YT_MainTableViewController.m */,
 				C9A92DE51B83C8A7009E274D /* Main.storyboard */,
+				C9B03D9A1B8CFD6000CDCB00 /* YT_SmileTableViewCell.h */,
+				C9B03D9B1B8CFD6000CDCB00 /* YT_SmileTableViewCell.m */,
 				C9A92DE81B83C8A7009E274D /* Images.xcassets */,
 				C9A92DEA1B83C8A7009E274D /* LaunchScreen.xib */,
 				C9A92DDB1B83C8A7009E274D /* Supporting Files */,
@@ -241,6 +246,7 @@
 				C9A92DE11B83C8A7009E274D /* AppDelegate.m in Sources */,
 				C9A92DDE1B83C8A7009E274D /* main.m in Sources */,
 				C9A92E091B83CE66009E274D /* YT_SmileDAO.m in Sources */,
+				C9B03D9C1B8CFD6000CDCB00 /* YT_SmileTableViewCell.m in Sources */,
 				C9A92E0C1B83D764009E274D /* YT_MainTableViewController.m in Sources */,
 				C9A92E061B83CA6C009E274D /* YT_Smile.m in Sources */,
 			);

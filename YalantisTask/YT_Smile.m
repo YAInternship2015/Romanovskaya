@@ -10,13 +10,14 @@
 
 @implementation YT_Smile
 
--(id)initWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex
+-(id)initWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex glyph:(NSString *)glyph
 {
     self = [super init];
     if (self) {
         _name = name;
         _desc = desc;
         _imageIndex = imageIndex;
+        _glyph = glyph;
         
         NSLog(@"init smile");
         return self;
