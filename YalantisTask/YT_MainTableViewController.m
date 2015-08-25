@@ -27,13 +27,11 @@
     [super didReceiveMemoryWarning];
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return NO;
 }
 
--(void)awakeFromNib
-{
+- (void)awakeFromNib {
     [super awakeFromNib];
     NSLog(@"awake from nib");
     self.smileDAO = [[YT_SmileDAO alloc] init];
@@ -44,22 +42,23 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section {
     return [self.smileDAO countSmiles];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     YT_SmileTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:
                              @"smileCell" forIndexPath:indexPath];
-    YT_Smile * smile = [self.smileDAO getSmileAtIndex:indexPath.row];
+    YT_Smile * smile = [self.smileDAO smileAtIndex:indexPath.row];
+    
     cell.title.text = smile.name;
     cell.subtitle.text = smile.desc;
     cell.glyph.text = smile.glyph;
     NSString *i = [NSString stringWithFormat:@"%d", smile.imageIndex];
     UIImage *image = [UIImage imageNamed:i];
     cell.smileView.image = image;
+    
     return cell;
 }
 

@@ -13,14 +13,14 @@
 
 @property (nonatomic, readonly) NSMutableArray *smiles;
 
--(void) initDefaultSmiles;
+- (void)initDefaultSmiles;
 
 @end
 
 @implementation YT_SmileDAO
 
--(id)init
-{
+- (id)init {
+    
     self = [super init];
     if (self) {
         _smiles = [[NSMutableArray alloc] init];
@@ -31,8 +31,8 @@
     return nil;
 }
 
--(void)initDefaultSmiles
-{
+- (void)initDefaultSmiles {
+    
     [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:1 glyph:@":)"];
     [self addSmileWithName:@"Surprise" description:@"Surprised smile" imageIndex:2 glyph:@"O_o"];
     [self addSmileWithName:@"Shiny" description:@"Very happy smile" imageIndex:3 glyph:@"xD"];
@@ -45,19 +45,20 @@
     [self addSmileWithName:@"Angry" description:@"Angry smile" imageIndex:10 glyph:@":@"];
 }
 
--(void)addSmileWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex glyph:(NSString *)glyph {
+- (void)addSmileWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex glyph:(NSString *)glyph {
+    
     YT_Smile * smile = [[YT_Smile alloc] initWithName:name description:desc imageIndex:imageIndex glyph:glyph];
     [self.smiles addObject:smile];
 }
 
--(YT_Smile *)getSmileAtIndex:(NSInteger)index
-{
+- (YT_Smile *)smileAtIndex:(NSInteger)index {
+    
     NSLog(@"getSmileAtIndex");
     return [self.smiles objectAtIndex:index];
 }
 
--(NSUInteger)countSmiles
-{
+- (NSUInteger)countSmiles {
+    
     NSLog(@"countSmiles = %d", (int)[self.smiles count]);
     return [self.smiles count];
 }
