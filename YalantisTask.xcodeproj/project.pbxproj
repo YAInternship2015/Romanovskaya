@@ -17,6 +17,7 @@
 		C9A92E091B83CE66009E274D /* YT_SmileDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A92E081B83CE66009E274D /* YT_SmileDAO.m */; };
 		C9A92E0C1B83D764009E274D /* YT_MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A92E0B1B83D764009E274D /* YT_MainTableViewController.m */; };
 		C9B03D9C1B8CFD6000CDCB00 /* YT_SmileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B03D9B1B8CFD6000CDCB00 /* YT_SmileTableViewCell.m */; };
+		C9D9DA1C1B8E499F005F9287 /* SmileList.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D9DA1B1B8E499F005F9287 /* SmileList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C9A92E0B1B83D764009E274D /* YT_MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_MainTableViewController.m; sourceTree = "<group>"; };
 		C9B03D9A1B8CFD6000CDCB00 /* YT_SmileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_SmileTableViewCell.h; sourceTree = "<group>"; };
 		C9B03D9B1B8CFD6000CDCB00 /* YT_SmileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_SmileTableViewCell.m; sourceTree = "<group>"; };
+		C9D9DA1B1B8E499F005F9287 /* SmileList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SmileList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A92E041B83CA6C009E274D /* YT_Smile.h */,
+				C9D9DA1B1B8E499F005F9287 /* SmileList.plist */,
 				C9A92E051B83CA6C009E274D /* YT_Smile.m */,
 				C9A92E071B83CE66009E274D /* YT_SmileDAO.h */,
 				C9A92E081B83CE66009E274D /* YT_SmileDAO.m */,
@@ -226,6 +229,7 @@
 				C9A92DE71B83C8A7009E274D /* Main.storyboard in Resources */,
 				C9A92DEC1B83C8A7009E274D /* LaunchScreen.xib in Resources */,
 				C9A92DE91B83C8A7009E274D /* Images.xcassets in Resources */,
+				C9D9DA1C1B8E499F005F9287 /* SmileList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

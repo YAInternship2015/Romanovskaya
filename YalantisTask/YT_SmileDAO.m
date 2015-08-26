@@ -32,17 +32,12 @@
 }
 
 - (void)initDefaultSmiles {
-    
-    [self addSmileWithName:@"Happy" description:@"Happy smile" imageIndex:1 glyph:@":)"];
-    [self addSmileWithName:@"Surprise" description:@"Surprised smile" imageIndex:2 glyph:@"O_o"];
-    [self addSmileWithName:@"Shiny" description:@"Very happy smile" imageIndex:3 glyph:@"xD"];
-    [self addSmileWithName:@"Winky" description:@"Winking smile" imageIndex:4 glyph:@";)"];
-    [self addSmileWithName:@"Cool" description:@"Cool smile" imageIndex:5 glyph:@"8-)"];
-    [self addSmileWithName:@"Teasy" description:@"Teasing smile" imageIndex:6 glyph:@":P"];
-    [self addSmileWithName:@"Puzzle" description:@"Puzzled smile" imageIndex:7 glyph:@"%)"];
-    [self addSmileWithName:@"Sad" description:@"Sad smile" imageIndex:8 glyph:@":("];
-    [self addSmileWithName:@"Weepy" description:@"Crying smile" imageIndex:9 glyph:@":,("];
-    [self addSmileWithName:@"Angry" description:@"Angry smile" imageIndex:10 glyph:@":@"];
+ 
+    NSString *pathToPlist = [[NSBundle mainBundle] pathForResource:@"SmileList" ofType:@"plist"];
+    NSArray *smileList = [NSArray arrayWithContentsOfFile:pathToPlist];
+    for (NSDictionary *smile in smileList){
+        [self addSmileWithName:smile[@"name"] description:smile[@"description"] imageIndex:[smile[@"imageIndex"] intValue] glyph:smile[@"glyph"]];
+    }
 }
 
 - (void)addSmileWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex glyph:(NSString *)glyph {

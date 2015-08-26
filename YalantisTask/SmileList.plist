@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>glyph</key>
+		<string>:@</string>
+		<key>imageIndex</key>
+		<integer>10</integer>
+		<key>description</key>
+		<string>Angry smile</string>
+		<key>name</key>
+		<string>Angry</string>
+	</dict>
+	<dict>
+		<key>glyph</key>
+		<string>:,(</string>
+		<key>imageIndex</key>
+		<integer>9</integer>
+		<key>description</key>
+		<string>Crying smile</string>
+		<key>name</key>
+		<string>Weepy</string>
+	</dict>
+	<dict>
+		<key>glyph</key>
+		<string>:(</string>
+		<key>imageIndex</key>
+		<integer>8</integer>
+		<key>description</key>
+		<string>Sad smile</string>
+		<key>name</key>
+		<string>Sad</string>
+	</dict>
+	<dict>
+		<key>glyph</key>
+		<string>%)</string>
+		<key>imageIndex</key>
+		<integer>7</integer>
+		<key>description</key>
+		<string>Puzzled smile</string>
+		<key>name</key>
+		<string>Puzzle</string>
+	</dict>
+	<dict>
+		<key>glyph</key>
+		<string>:P</string>
+		<key>imageIndex</key>
+		<integer>6</integer>
+		<key>description</key>
+		<string>Teasing smile</string>
+		<key>name</key>
+		<string>Teasy</string>
+	</dict>
+	<dict>
+		<key>glyph</key>
+		<string>8-)</string>
+		<key>imageIndex</key>
+		<integer>5</integer>
+		<key>description</key>
+		<string>Cool smile</string>
+		<key>name</key>
+		<string>Cool</string>
+	</dict>
+	<dict>
+		<key>glyph</key>
+		<string>;)</string>
+		<key>imageIndex</key>
+		<integer>4</integer>
+		<key>description</key>
+		<string>Winking smile</string>
+		<key>name</key>
+		<string>Winky</string>
+	</dict>
+	<dict>
+		<key>glyph</key>
+		<string>O_o</string>
+		<key>imageIndex</key>
+		<integer>2</integer>
+		<key>description</key>
+		<string>Surprised smile</string>
+		<key>name</key>
+		<string>Surprise</string>
+	</dict>
+	<dict>
+		<key>glyph</key>
+		<string>:)</string>
+		<key>imageIndex</key>
+		<integer>1</integer>
+		<key>description</key>
+		<string>Happy smile</string>
+		<key>name</key>
+		<string>Happy</string>
+	</dict>
+	<dict>
+		<key>glyph</key>
+		<string>xD</string>
+		<key>imageIndex</key>
+		<integer>3</integer>
+		<key>description</key>
+		<string>Very happy smile</string>
+		<key>name</key>
+		<string>Shiny</string>
+	</dict>
+</array>
+</plist>
