@@ -19,7 +19,7 @@
 
 @implementation YT_SmileCollectionViewController
 
-static NSString * const reuseIdentifier = @"Smile Cell";
+static NSString * const reuseIdentifier = @"SmileCellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +27,8 @@ static NSString * const reuseIdentifier = @"Smile Cell";
         UICollectionViewLayout *layout = [self flowLayout];
 
     [self.collectionView setCollectionViewLayout:layout];
-    [self.collectionView registerClass:[YT_SmileCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+#warning следующая строка кода Вам ломает логику ячейки в cllection view. Когда Вы кладете ячейку на коллекшн вью в сториборде, Вы регистрируете не класс для reuseIdentifier, а xib для reuseIdentifier. Тогда ячейка загружает свое представление из сториборды. Следующая строка кода регистрирует класс для reuseIdentifier, соответственно ячейку будут создаваться не из сториборды с соответствующим UI, а из кода без UI. Соответственно, ничего не отображалось, потому что smileView у ячейки был nil
+//    [self.collectionView registerClass:[YT_SmileCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     self.smileDAO = [[YT_SmileDAO alloc] init];
 

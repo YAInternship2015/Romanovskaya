@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#warning не знаю как у Вас, у меня в коллекшн вью представлении экран пустой
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
