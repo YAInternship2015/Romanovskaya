@@ -10,6 +10,7 @@
 
 @interface YT_Smile : NSObject
 
+#warning не нужно в *.h файле показывать readwrite свойства. В *.h достаточно показать readonly доступ, а уже в *.m - readwrite
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *desc;
 @property (nonatomic, assign) int imageIndex;

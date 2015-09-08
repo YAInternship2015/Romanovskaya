@@ -116,7 +116,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="WOn-6W-sKD" secondAttribute="bottom" id="Mqo-b0-hZR"/>
                                     <constraint firstItem="WOn-6W-sKD" firstAttribute="top" secondItem="9LI-Dm-dHz" secondAttribute="top" id="daU-yj-CnC"/>
@@ -282,7 +282,6 @@
         <!--Navigation Controller-->
         <scene sceneID="FNp-QM-9wv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NKw-Ns-Ish" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FHg-Fn-Ulm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="go8-tz-MO4">
@@ -294,6 +293,7 @@
                         <segue destination="cqa-Va-tW8" kind="relationship" relationship="rootViewController" id="q7K-UB-Fok"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKw-Ns-Ish" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="349" y="1682"/>
         </scene>

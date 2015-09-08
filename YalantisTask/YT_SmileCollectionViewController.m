@@ -79,10 +79,7 @@ static NSString * const reuseIdentifier = @"Smile Cell";
     
 }
 
-
-
-
-
+#warning все, что ниже, можно удалять
 #pragma mark <UICollectionViewDelegate>
 
 /*

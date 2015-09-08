@@ -10,6 +10,7 @@
 
 @interface YT_LayoutViewController ()
 
+#warning используйте формат (nonatomic, strong), и после * не нужен пробел
 @property (strong, nonatomic) UIViewController * tableViewController;
 @property (strong, nonatomic) UIViewController * collectionViewController;
 
@@ -25,15 +26,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+#warning UIStoryboard *storyBoard
     UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     self.tableViewController  = [storyBoard instantiateViewControllerWithIdentifier:@"TableViewController"];
     self.collectionViewController = [storyBoard instantiateViewControllerWithIdentifier:@"CollectionViewController"];
     
     [self displayViewController:self.tableViewController];
+#warning тексты, которые создаются в коде и которые увидит юзер в UI, должны быть объявлены в файле Localizable.strings. Что это за файл и зачем он нужен очень легко найти в гугле
     self.layoutSwitch.title = @"Collection";
     
 }
 
+#warning этот метод не нужен
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSLog(@"viewVillAppear");
@@ -51,9 +55,11 @@
     }
 }
 
+#warning пробел после (void) не нужен
 - (void) changeLayoutViewTo:(UIViewController *) vc{
     if (self.currentViewController != nil) {
         [self removeViewController:self.currentViewController];
+#warning можно обойтись без else - так как следующая строка выполняется в обоих ветках, можно написать ее после if
         [self displayViewController:vc];
     } else {
         [self displayViewController:vc];

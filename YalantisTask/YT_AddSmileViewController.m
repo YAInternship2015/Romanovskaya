@@ -39,6 +39,7 @@
     
 }
 
+#warning этот метод можно удалить
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSLog(@"View will appear");
@@ -76,6 +77,7 @@
 }
 
 - (void)addNewSmileFromDTO:(NSDictionary *)smileDTO {
+#warning можно просто добавить модели конструктор initWithDictionary:
     YT_Smile *smile = [[YT_Smile alloc] initWithName:[smileDTO valueForKey:@"name"] description:[smileDTO valueForKey:@"desc"] imageIndex:0 glyph:[smileDTO valueForKey:@"glyph"]];
     [self.smileDao saveSmile:smile];
     
@@ -93,6 +95,8 @@
     
     BOOL flag = false;
     NSString * txt = textField.text;
+    
+#warning вся валидация должна быть раскидана в объйкты-валидаторы, по одному объекту на одно поле
     
     if (textField == self.nameField) {
         if (([txt length] > 2 & [txt length] < 12) | [txt isEqualToString:@""]) {

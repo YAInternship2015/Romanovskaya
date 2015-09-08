@@ -22,6 +22,7 @@
         NSLog(@"init smile");
         return self;
     }
+#warning всегда делайте return self;
     return nil;
 }
 
