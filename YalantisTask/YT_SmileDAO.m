@@ -8,6 +8,7 @@
 
 #import "YT_SmileDAO.h"
 #import "YT_Smile.h"
+#import "UIKit/UIImage.h"
 
 @interface YT_SmileDAO ()
 
@@ -60,9 +61,10 @@
 
 - (void) saveSmile:(YT_Smile *)smile {
     [self.smiles addObject:smile];
+    
     NSMutableArray *smileList = [[NSMutableArray arrayWithContentsOfFile:self.pathToPlist] mutableCopy];
     NSDictionary *smileDTO = [[NSDictionary alloc]
-                              initWithObjects:@[smile.name, smile.desc, [NSNumber numberWithInt:smile.imageIndex], smile.glyph]
+                              initWithObjects:@[smile.name, smile.desc, @0, smile.glyph]
                               forKeys:@[@"name", @"description", @"imageIndex", @"glyph"]];
     
     [smileList addObject:smileDTO];

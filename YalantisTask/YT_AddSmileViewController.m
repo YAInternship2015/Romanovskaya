@@ -39,12 +39,6 @@
     
 }
 
-#warning этот метод можно удалить
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    NSLog(@"View will appear");
-}
-
 - (IBAction)tapOnView:(UITapGestureRecognizer *)sender {
     if (self.currentlyEditedField != NULL) {
         [self textFieldShouldReturn:self.currentlyEditedField];
@@ -55,12 +49,6 @@
 }
 
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
 - (IBAction)pressSaveButton:(UIBarButtonItem *)sender {
     if (self.currentlyEditedField != nil) {
         if (![self textFieldShouldEndEditing:self.currentlyEditedField]) {
@@ -68,7 +56,8 @@
         }
     } else if ([self validateSmile]) {
         [self addNewSmileFromDTO:self.smileDTO];
-        self.errorLabel.text = [[self.smileDTO valueForKey:@"glyph"] stringByAppendingString:@" added"];
+        self.errorLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Smile '%@' added", nil), [self.smileDTO valueForKey:@"glyph"]];
+
         [self emptyDTO:self.smileDTO];
         [self emptyFields];
     }
@@ -77,9 +66,8 @@
 }
 
 - (void)addNewSmileFromDTO:(NSDictionary *)smileDTO {
-#warning можно просто добавить модели конструктор initWithDictionary:
-    YT_Smile *smile = [[YT_Smile alloc] initWithName:[smileDTO valueForKey:@"name"] description:[smileDTO valueForKey:@"desc"] imageIndex:0 glyph:[smileDTO valueForKey:@"glyph"]];
-    [self.smileDao saveSmile:smile];
+    
+    [self.smileDao saveSmile:[[YT_Smile alloc] initWithDictionary:smileDTO]];
     
 }
 
@@ -103,7 +91,7 @@
             [self.smileDTO setObject:txt forKey:@"name"];
             flag = true;
         } else {
-            self.errorLabel.text = @"The name should be from 3 to 11 symbools";
+            self.errorLabel.text = NSLocalizedString(@"The name should be from 3 to 11 symbools", nil);
         }
     }
     
@@ -112,7 +100,7 @@
             [self.smileDTO setObject:txt forKey:@"desc"];
             flag = true;
         } else {
-            self.errorLabel.text = @"The description should be up to 30 symbools";
+            self.errorLabel.text = NSLocalizedString(@"The description should be up to 30 symbools", nil);
         }
     }
     
@@ -121,7 +109,7 @@
             [self.smileDTO setObject:txt forKey:@"glyph"];
             flag = true;
         } else {
-            self.errorLabel.text = @"The glyph should be 2 to 4 symbools";
+            self.errorLabel.text = NSLocalizedString(@"The glyph should be 2 to 4 symbools", nil);
         }
     }
     

@@ -7,23 +7,40 @@
 //
 
 #import "YT_Smile.h"
+#import "UIKit/UIImage.h"
 
 @implementation YT_Smile
 
--(id)initWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex glyph:(NSString *)glyph
-{
+-(id)initWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex glyph:(NSString *)glyph {
+    
     self = [super init];
     if (self) {
         _name = name;
         _desc = desc;
-        _imageIndex = imageIndex;
         _glyph = glyph;
         
-        NSLog(@"init smile");
-        return self;
+        if (imageIndex != 0){
+            NSString *i = [NSString stringWithFormat:@"%d", imageIndex];
+            UIImage *img = [UIImage imageNamed:i];
+            _image = img;
+        } else {
+            _image = nil;
+        }
     }
-#warning всегда делайте return self;
-    return nil;
+    return self;
+}
+
+-(id)initWithDictionary:(NSDictionary *)dictionary {
+    
+    self = [super init];
+    if (self) {
+        _name = [dictionary valueForKey:@"name"];
+        _desc = [dictionary valueForKey:@"desc"];
+        _glyph = [dictionary valueForKey:@"glyph"];
+        _image = nil;
+        
+    }
+    return self;
 }
 
 @end

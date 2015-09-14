@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class YT_Smile;
 
 @interface YT_SmileTableViewCell : UITableViewCell
-#warning все аутлеты необходимо перенести в *.m, в *.h они не нужны. + используйте формат (nonatomic, weak). Это же касается YT_SmileCollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *smileView;
-@property (weak, nonatomic) IBOutlet UILabel *title;
-@property (weak, nonatomic) IBOutlet UILabel *subtitle;
-@property (weak, nonatomic) IBOutlet UILabel *glyph;
+
+- (id)setupWithSmile:(YT_Smile *)smile;
 
 @end

@@ -24,11 +24,6 @@
     self.smileDAO = [[YT_SmileDAO alloc] init];
 }
 
-#warning этот метод можно удалить
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     NSLog(@"Table view will appear");
@@ -55,20 +50,7 @@
                              @"smileCell" forIndexPath:indexPath];
     YT_Smile * smile = [self.smileDAO smileAtIndex:indexPath.row];
     
-#warning ячейка должна уметь сама заполнять себя моделью, для этого в ней должен быть реализован метод -setupWithSmile: или вроде того. Это же касается collectionView ячейки
-    cell.title.text = smile.name;
-    cell.subtitle.text = smile.desc;
-    cell.glyph.text = smile.glyph;
-    
-    if (smile.imageIndex != 0){
-        NSString *i = [NSString stringWithFormat:@"%d", smile.imageIndex];
-        UIImage *image = [UIImage imageNamed:i];
-        cell.smileView.image = image;
-    } else {
-        cell.smileView.image = NULL;
-    }
-    
-    return cell;
+    return [cell setupWithSmile:smile];
 }
 
 

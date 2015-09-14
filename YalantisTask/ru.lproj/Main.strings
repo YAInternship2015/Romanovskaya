@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "1xK-sW-Ymg"; */
+"1xK-sW-Ymg.text" = "Subtitle";
+
+/* Class = "UIBarButtonItem"; title = "Layout"; ObjectID = "7Vp-T6-cNb"; */
+"7Vp-T6-cNb.title" = "Layout";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "8A2-PU-ogR"; */
+"8A2-PU-ogR.title" = "Add";
+
+/* Class = "UITextField"; placeholder = "Suggest a name..."; ObjectID = "Czq-ZQ-7Ej"; */
+"Czq-ZQ-7Ej.placeholder" = "Придумай имя...";
+
+/* Class = "UITextField"; placeholder = "Make a Smile :)"; ObjectID = "Qjl-ga-bUU"; */
+"Qjl-ga-bUU.placeholder" = "Улыбнись :)";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Xtm-Y2-Hsr"; */
+"Xtm-Y2-Hsr.text" = "Title";
+
+/* Class = "UILabel"; text = "L"; ObjectID = "cPW-mx-f8S"; */
+"cPW-mx-f8S.text" = "L";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "g1h-0r-0d3"; */
+"g1h-0r-0d3.title" = "Сохранить";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "gn9-gi-qSK"; */
+"gn9-gi-qSK.title" = "Новый";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iQl-JX-Y8E"; */
+"iQl-JX-Y8E.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Add description..."; ObjectID = "kB8-Qe-Kwl"; */
+"kB8-Qe-Kwl.placeholder" = "Описание...";
+
+/* Class = "UINavigationItem"; title = "Add new smile"; ObjectID = "pMY-nc-N41"; */
+"pMY-nc-N41.title" = "Добавить смайл";
+
+/* Class = "UITableViewController"; title = "Smiles"; ObjectID = "yRq-lv-u22"; */
+"yRq-lv-u22.title" = "Смайлы";

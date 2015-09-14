@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class YT_Smile;
 
 @interface YT_SmileCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *smileView;
+
+- (id)setupWitSmile:(YT_Smile *)smile;
 
 @end

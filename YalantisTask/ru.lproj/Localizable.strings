@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  YalantisTask
+
+  Created by Бумбон on 14.09.15.
+  Copyright (c) 2015 Home. All rights reserved.
+*/
+
+"Collection" = "Коллекция";
+"Table" = "Таблица";
+"Smile '%@' added" = "Смайл '%@' добавлен";
+"The name should be from 3 to 11 symbools" = "Им] должно быть от 3 до 11 символов";
+"The description should be up to 30 symbools" = "Описание не более 30 символов";
+"The glyph should be 2 to 4 symbools" = "Смайл должен быть от 2 до 4 символов";

@@ -7,15 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+@class UIImage;
 
 @interface YT_Smile : NSObject
 
-#warning не нужно в *.h файле показывать readwrite свойства. В *.h достаточно показать readonly доступ, а уже в *.m - readwrite
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *desc;
-@property (nonatomic, assign) int imageIndex;
-@property (nonatomic, copy) NSString *glyph;
+@property (nonatomic, copy, readonly) NSString *name;
+@property (nonatomic, copy, readonly) NSString *desc;
+@property (nonatomic, readonly) UIImage *image;
+@property (nonatomic, copy, readonly) NSString *glyph;
 
 - (id)initWithName:(NSString *)name description:(NSString *)desc imageIndex:(int)imageIndex glyph:(NSString *)glyph;
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

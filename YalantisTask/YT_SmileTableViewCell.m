@@ -7,17 +7,28 @@
 //
 
 #import "YT_SmileTableViewCell.h"
+#import "YT_Smile.h"
+
+@interface YT_SmileTableViewCell()
+
+@property (nonatomic, weak) IBOutlet UIImageView *smileView;
+@property (nonatomic, weak) IBOutlet UILabel *title;
+@property (nonatomic, weak) IBOutlet UILabel *subtitle;
+@property (nonatomic, weak) IBOutlet UILabel *glyph;
+
+
+@end
 
 @implementation YT_SmileTableViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
-}
+-(id)setupWithSmile:(YT_Smile *)smile {
+    _title.text = smile.name;
+    _subtitle.text = smile.desc;
+    _glyph.text = smile.glyph;
+    _smileView.image = smile.image;
+    
+    return self;
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end

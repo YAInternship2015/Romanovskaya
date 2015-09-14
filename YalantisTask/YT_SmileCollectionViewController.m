@@ -23,13 +23,8 @@ static NSString * const reuseIdentifier = @"SmileCellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-        UICollectionViewLayout *layout = [self flowLayout];
-
+    UICollectionViewLayout *layout = [self flowLayout];
     [self.collectionView setCollectionViewLayout:layout];
-#warning следующая строка кода Вам ломает логику ячейки в cllection view. Когда Вы кладете ячейку на коллекшн вью в сториборде, Вы регистрируете не класс для reuseIdentifier, а xib для reuseIdentifier. Тогда ячейка загружает свое представление из сториборды. Следующая строка кода регистрирует класс для reuseIdentifier, соответственно ячейку будут создаваться не из сториборды с соответствующим UI, а из кода без UI. Соответственно, ничего не отображалось, потому что smileView у ячейки был nil
-//    [self.collectionView registerClass:[YT_SmileCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
     self.smileDAO = [[YT_SmileDAO alloc] init];
 
 }
@@ -59,11 +54,7 @@ static NSString * const reuseIdentifier = @"SmileCellIdentifier";
     
     YT_Smile * smile = [self.smileDAO smileAtIndex:indexPath.row];
     
-    NSString *i = [NSString stringWithFormat:@"%d", smile.imageIndex];
-    UIImage *image = [UIImage imageNamed:i];
-    cell.smileView.image = image;
-    
-    return cell;
+    return [cell setupWitSmile:smile];
 }
 
 - (UICollectionViewFlowLayout *)flowLayout{
@@ -71,45 +62,13 @@ static NSString * const reuseIdentifier = @"SmileCellIdentifier";
     NSLog(@"init flowLayout");
     
     fl.minimumLineSpacing = 20.0f;
-    fl.itemSize = CGSizeMake(40.0f, 40.0f);
-    fl.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    fl.itemSize = CGSizeMake(100.0f, 100.0f);
+//    fl.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     fl.sectionInset = UIEdgeInsetsMake(10.0f, 10.0f, 10.0f, 10.0f);
     fl.minimumInteritemSpacing = 10.0f;
     
     return fl;
     
 }
-
-#warning все, что ниже, можно удалять
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end
